@@ -31,8 +31,8 @@ function draw(){
             alert('Ban phai nhap du lieu vao truong '+nameE[i]+"!!!");
             return 0;
         }
-        else if(x>100){
-            alert('Gia tri ban nhap phai be hon 100');
+        else if(x>100||x<0){
+            alert('Gia tri ban nhap phai be hon 100 va lon hon 0');
             return 0;
         }
        else{
