@@ -27,13 +27,18 @@ function draw(){
     for (i = 0; i < count; i++){
         name = "nameE"+i;
         x = document.getElementById(name).value;
-        chart += 	'<tr>'
-            +	'<td>'+nameE[i]+'</td>'
-            +	'<td style = "width:150px">'
-            +	'<div style = "width:100px">'
-            +	'<div style = "border:5px solid red; width: '+ x + '%; float:left; float: left; margin:5px;"></div></div><label>'
-            +	x
-            +	'%</label></td></tr>'
+        if(x==""){
+            alert('Ban phai nhap du lieu vao truong '+nameE[i]+"!!!");
+        }
+       else{
+         chart +=   '<tr>'
+            +   '<td>'+nameE[i]+'</td>'
+            +   '<td style = "width:150px">'
+            +   '<div style = "width:100px">'
+            +   '<div style = "border:5px solid red; width: '+ x + '%; float:left; float: left; margin:5px;"></div></div><label>'
+            +   x
+            +   '%</label></td></tr>'
+       }
     }
     
     document.getElementById("show_chart").innerHTML = chart;
