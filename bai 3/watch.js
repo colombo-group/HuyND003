@@ -31,8 +31,8 @@ function run(){
 	}
 }
 var time;
+
 function start(){
-    mns = 0;
     time = setInterval(function(){
         run()
     }, 100);
@@ -40,6 +40,8 @@ function start(){
     document.getElementById('pause').disabled=false;
 }
 function pause(){
+// document.write(mns);
+var msc=mns;
 if(mns>0||mn>0||sc>0){
     clearInterval(time);
     document.getElementById('start').innerHTML="Tiep tuc";
