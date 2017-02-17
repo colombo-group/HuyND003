@@ -36,6 +36,6 @@ function mod(){
 	var y=document.getElementById('number2').value;
 	x=parseFloat(x);
 	y=parseFloat(y);
-	z=x%y;
+	z=Math.pow(x,y);
 	document.getElementById('equal').value=z;
 }
