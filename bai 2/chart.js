@@ -29,13 +29,18 @@ function draw(){
         x = document.getElementById(name).value;
         if(x==""){
             alert('Ban phai nhap du lieu vao truong '+nameE[i]+"!!!");
+            return 0;
+        }
+        else if(x>100){
+            alert('Gia tri ban nhap phai be hon 100');
+            return 0;
         }
        else{
          chart +=   '<tr>'
             +   '<td>'+nameE[i]+'</td>'
             +   '<td style = "width:150px">'
             +   '<div style = "width:100px">'
-            +   '<div style = "border:5px solid red; width: '+ x + '%; float:left; float: left; margin:5px;"></div></div><label>'
+            +   '<div style = "background:red;height:5px; width: '+ x + 'px; float:left; float: left; margin:5px;"></div></div><label>'
             +   x
             +   '%</label></td></tr>'
        }
